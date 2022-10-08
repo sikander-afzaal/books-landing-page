@@ -46,12 +46,7 @@
   border: none;
   cursor: pointer;
 }
-.app .cta {
-  background: #13c2c2;
-}
-.app .store {
-  background-color: #037f9a;
-}
+
 .btn-div button h4 {
   font-weight: 700;
   font-size: 16px;

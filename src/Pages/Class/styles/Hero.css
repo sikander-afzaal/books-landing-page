@@ -7,6 +7,10 @@
   min-height: 480px;
   width: 100%;
 }
+.class-hero img {
+  width: 141px;
+  height: 141px;
+}
 .class-hero h1 {
   font-weight: 500;
   font-size: 48px;

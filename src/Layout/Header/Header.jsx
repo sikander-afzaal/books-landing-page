@@ -3,10 +3,11 @@ import { useState, useEffect, useRef } from "react";
 //ICON LIBRARY -----------------------
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+//React router dom-----------------------------
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [openHeader, setOpenHeader] = useState(false);
-  const [scroll, setScroll] = useState(false);
   const header = useRef(null);
   useEffect(() => {
     const addScrollClass = () => {
@@ -33,24 +34,24 @@ const Header = () => {
       <header ref={header}>
         <img src="/assets/logo.png" alt="" />
         <nav className={`${openHeader ? "open-header" : ""}`}>
-          <a href="#" className="nav-links">
+          <Link to={"/"} className="nav-links">
             CLASS班級
-          </a>
-          <a href="#" className="nav-links">
+          </Link>
+          <Link to={"/tutor"} className="nav-links">
             CLASS家教
-          </a>
-          <a href="#" className="nav-links">
+          </Link>
+          <Link to={"/"} className="nav-links">
             CLASS書店
-          </a>
-          <a href="#" className="nav-links">
+          </Link>
+          <Link to={"/"} className="nav-links">
             關於我們
-          </a>
-          <a href="#" className="nav-links">
+          </Link>
+          <Link to={"/"} className="nav-links">
             服務與願景
-          </a>
-          <a href="#" className="nav-links">
+          </Link>
+          <Link to={"/"} className="nav-links">
             聯絡我們
-          </a>
+          </Link>
         </nav>
         <FontAwesomeIcon
           icon={openHeader ? faXmark : faBars}
