@@ -36,22 +36,58 @@ const Header = () => {
           <img src="/assets/logo.png" alt="" />
         </Link>
         <nav className={`${openHeader ? "open-header" : ""}`}>
-          <Link to={"/class"} className="nav-links">
+          <Link
+            onClick={() => {
+              setOpenHeader(false);
+            }}
+            to={"/class"}
+            className="nav-links"
+          >
             CLASS班級
           </Link>
-          <Link to={"/tutor"} className="nav-links">
+          <Link
+            onClick={() => {
+              setOpenHeader(false);
+            }}
+            to={"/tutor"}
+            className="nav-links"
+          >
             CLASS家教
           </Link>
-          <Link to={"/bookstore"} className="nav-links">
+          <Link
+            onClick={() => {
+              setOpenHeader(false);
+            }}
+            to={"/bookstore"}
+            className="nav-links"
+          >
             CLASS書店
           </Link>
-          <a href={"/#about"} className="nav-links">
+          <a
+            onClick={() => {
+              setOpenHeader(false);
+            }}
+            href={"/#about"}
+            className="nav-links"
+          >
             關於我們
           </a>
-          <a href={"/#service"} className="nav-links">
+          <a
+            onClick={() => {
+              setOpenHeader(false);
+            }}
+            href={"/#service"}
+            className="nav-links"
+          >
             服務與願景
           </a>
-          <a href={"/#contact"} className="nav-links">
+          <a
+            onClick={() => {
+              setOpenHeader(false);
+            }}
+            href={"/#contact"}
+            className="nav-links"
+          >
             聯絡我們
           </a>
         </nav>
