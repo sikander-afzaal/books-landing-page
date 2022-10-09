@@ -40,7 +40,7 @@ const Header = () => {
           <Link to={"/tutor"} className="nav-links">
             CLASS家教
           </Link>
-          <Link to={"/"} className="nav-links">
+          <Link to={"/bookstore"} className="nav-links">
             CLASS書店
           </Link>
           <Link to={"/"} className="nav-links">
