@@ -32,9 +32,11 @@ const Header = () => {
         ></div>
       )}
       <header ref={header}>
-        <img src="/assets/logo.png" alt="" />
+        <Link to={"/"}>
+          <img src="/assets/logo.png" alt="" />
+        </Link>
         <nav className={`${openHeader ? "open-header" : ""}`}>
-          <Link to={"/"} className="nav-links">
+          <Link to={"/class"} className="nav-links">
             CLASS班級
           </Link>
           <Link to={"/tutor"} className="nav-links">
