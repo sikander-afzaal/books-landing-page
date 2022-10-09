@@ -8,7 +8,7 @@ const About = () => {
       <div className="max-cont">
         <h1>關於我們</h1>
         <div>
-          <div className="func-row">
+          <div id="about" className="func-row">
             <img src="/assets/home-photo1.png" alt="" />
             <div>
               <h2>關於CLASS</h2>
@@ -19,7 +19,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="func-row">
+          <div id="service" className="func-row">
             <img src="/assets/home-photo2.png" alt="" />
             <div>
               <h2>服務與願景</h2>

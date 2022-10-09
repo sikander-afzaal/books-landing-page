@@ -3,7 +3,7 @@ import "./styles/Producs.css";
 
 const Products = () => {
   return (
-    <div className="products">
+    <div id="products" className="products">
       <h3>我們的產品</h3>
       <h2>專為跨世代打造數位學習產品</h2>
       <div className="product-row">

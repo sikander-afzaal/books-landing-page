@@ -45,15 +45,15 @@ const Header = () => {
           <Link to={"/bookstore"} className="nav-links">
             CLASS書店
           </Link>
-          <Link to={"/"} className="nav-links">
+          <a href={"/#about"} className="nav-links">
             關於我們
-          </Link>
-          <Link to={"/"} className="nav-links">
+          </a>
+          <a href={"/#service"} className="nav-links">
             服務與願景
-          </Link>
-          <Link to={"/"} className="nav-links">
+          </a>
+          <a href={"/#contact"} className="nav-links">
             聯絡我們
-          </Link>
+          </a>
         </nav>
         <FontAwesomeIcon
           icon={openHeader ? faXmark : faBars}

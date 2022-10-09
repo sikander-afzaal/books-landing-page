@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MailModal from "../../Components/MailModal/MailModal";
 import "./styles/Contact.css";
 
 const Contact = () => {
@@ -11,6 +12,8 @@ const Contact = () => {
     message: "",
   });
   const [disabled, setDisabled] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  //input field handler ------------------------------------
   const changeHandler = (e) => {
     const inputName = e.target.name;
     setFormData((prev) => {
@@ -28,9 +31,10 @@ const Contact = () => {
     }
   };
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
+      {openModal && <MailModal closeModal={setOpenModal} />}
       <div className="max-cont">
-        <form>
+        <form onSubmit={(e) => e.preventDefault()}>
           <input
             onChange={changeHandler}
             name="name"
@@ -75,7 +79,12 @@ const Contact = () => {
             name="message"
             placeholder="描述*"
           ></textarea>
-          <button className={`${disabled ? "" : "disabled"}`}>送出</button>
+          <button
+            onClick={() => disabled && setOpenModal(true)}
+            className={`${disabled ? "" : "disabled"}`}
+          >
+            送出
+          </button>
         </form>
         <div className="contact-info">
           <h2>想要數位化經營，提供三位一體的服務給學生家長嗎？</h2>

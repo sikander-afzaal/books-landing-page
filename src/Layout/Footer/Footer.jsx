@@ -1,4 +1,6 @@
 import "./Footer.css";
+//React Router
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,21 +15,23 @@ const Footer = () => {
       />
       <footer>
         <div>
-          <img src="/assets/logo.png" alt="" />
+          <Link to={"/"}>
+            <img src="/assets/logo.png" alt="" />
+          </Link>
           <p>Copyright ©Class Ltd. 2022</p>
         </div>
         <div className="right-footer">
           <div className="foot-col">
             <h2>產品與服務</h2>
-            <a href="#">CLASS 班級</a>
-            <a href="#">CLASS 家教</a>
-            <a href="#">CLASS 書店</a>
+            <Link to="/class">CLASS 班級</Link>
+            <Link to="/tutor">CLASS 家教</Link>
+            <Link to="/bookstore">CLASS 書店</Link>
           </div>
           <div className="foot-col">
             <h2>關於 Class</h2>
-            <a href="#">關於我們</a>
-            <a href="#">服務與願景</a>
-            <a href="#">聯絡我們</a>
+            <a href="#about">關於我們</a>
+            <a href="#service">服務與願景</a>
+            <a href="#contact">聯絡我們</a>
           </div>
           <div className="foot-col">
             <h2>追蹤我們</h2>

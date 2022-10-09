@@ -11,7 +11,7 @@ const Hero = () => {
             24HR
             家教協助，幫助您系統化管理每一位學生及家長，同時提供給學生更多元的學習及家教資源！
           </p>
-          <a href="#" className="cta-btn">
+          <a href="#products" className="cta-btn">
             了解產品
           </a>
         </div>
