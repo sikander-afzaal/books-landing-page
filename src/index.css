@@ -18,6 +18,9 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }
+body {
+  overflow-x: hidden;
+}
 .container {
   width: 100%;
   display: flex;

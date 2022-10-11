@@ -1,10 +1,15 @@
 import "./styles/Hero.css";
+import { Fade } from "react-reveal";
 
 const Hero = () => {
   return (
     <div style={{ backgroundColor: "var(--orange)" }} className="class-hero">
-      <img src="/assets/pencil.png" alt="" />
-      <h1>CLASS 家教</h1>
+      <Fade>
+        <img src="/assets/pencil.png" alt="" />
+      </Fade>
+      <Fade bottom>
+        <h1>CLASS 家教</h1>
+      </Fade>
     </div>
   );
 };

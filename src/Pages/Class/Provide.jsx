@@ -1,12 +1,17 @@
 import "./styles/Provide.css";
+import { Fade } from "react-reveal";
 
 const ProvideRow = ({ img, head, desc }) => {
   return (
     <div className="provide-row">
-      <img src={img} alt="" />
+      <Fade duration={1000} delay={500} left>
+        <img src={img} alt="" />
+      </Fade>
       <div className="text-col">
-        <h3>{head}</h3>
-        <p>{desc}</p>
+        <Fade duration={1000} delay={500} collapse bottom>
+          <h3>{head}</h3>
+          <p>{desc}</p>
+        </Fade>
       </div>
     </div>
   );
@@ -47,10 +52,12 @@ const Provide = () => {
   ];
   return (
     <div className="provide">
-      <h1 className="heading">提供教師所需教育溝通以及數位化經營工具</h1>
-      <h2 className="sub">
-        CLASS班級紀錄學生學習狀況並作為與家長學生溝通工具，讓校方及教師下班生活有品質。
-      </h2>
+      <Fade duration={1000} collapse top>
+        <h1 className="heading">提供教師所需教育溝通以及數位化經營工具</h1>
+        <h2 className="sub">
+          CLASS班級紀錄學生學習狀況並作為與家長學生溝通工具，讓校方及教師下班生活有品質。
+        </h2>
+      </Fade>
       <div className="provide-box">
         <hr />
         {DATA.map((elem, idx) => {
