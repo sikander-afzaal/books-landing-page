@@ -9,21 +9,21 @@ const Contact = () => {
     name: "",
     phone: "",
     email: "",
-    class: "",
+    school: "",
     service: "",
-    message: "",
+    content: "",
   });
   const [disabled, setDisabled] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const submitHandler = async (e) => {
     e.preventDefault();
-    axios
-      .post(
-        "https://script.google.com/macros/s/AKfycbx_jGvvdg6NEhaPBgAtF5FQlcTgGuSReBgMBjS1J_YE7srs-QfrlcxcemfXgAFn2kVf/exec",
-        formData
-      )
-      .then(() => console.log("done0"))
-      .catch(() => console.log("error"));
+    // axios
+    //   .post(
+    //     "https://script.google.com/macros/s/AKfycbx_jGvvdg6NEhaPBgAtF5FQlcTgGuSReBgMBjS1J_YE7srs-QfrlcxcemfXgAFn2kVf/exec",
+    //     formData
+    //   )
+    //   .then(() => console.log("done0"))
+    //   .catch(() => console.log("error"));
   };
   //input field handler ------------------------------------
   const changeHandler = (e) => {
@@ -46,8 +46,14 @@ const Contact = () => {
     <div id="contact" className="contact">
       {openModal && <MailModal closeModal={setOpenModal} />}
       <div className="max-cont">
+        <iframe name="hidden_iframe" style={{ display: "none" }}></iframe>
         <Fade>
-          <form onSubmit={submitHandler}>
+          <form
+            action="https://script.google.com/macros/s/AKfycbx_jGvvdg6NEhaPBgAtF5FQlcTgGuSReBgMBjS1J_YE7srs-QfrlcxcemfXgAFn2kVf/exec"
+            method="post"
+            target="hidden_iframe"
+            onSubmit={submitHandler}
+          >
             <input
               onChange={changeHandler}
               name="name"
@@ -71,8 +77,8 @@ const Contact = () => {
             />
             <input
               onChange={changeHandler}
-              value={formData.class}
-              name="class"
+              value={formData.school}
+              name="school"
               type="text"
               placeholder="學校／補習班名稱*"
             />
@@ -88,8 +94,8 @@ const Contact = () => {
             </select>
             <textarea
               onChange={changeHandler}
-              value={formData.message}
-              name="message"
+              value={formData.content}
+              name="content"
               placeholder="描述*"
             ></textarea>
             <button
